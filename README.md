@@ -11,6 +11,8 @@
     <li><a href="#how-a-neural-network-learn">How a neural network learn</a></li>
     <li><a href="#test-different-selection-of-model-configuration">Test different selection of model configuration</a></li>
     <li><a href="#examining-results">Examining results</a></li>
+    <li><a href="#summary">Summary</a></li>
+
   </ol>
 </details>
 
@@ -406,5 +408,7 @@ Accuracy: 93.6 %
 </br>
 
 All the steps presented in this examining result section can be found in the file EDA.ipynb.
+
+### Summary
 
 To wrap things up, this 2-layer neural network will not solve any real-world tasks, but it is an excellent starting point for anyone diving into artificial intelligence, machine learning, and deep learning. It is often the case that you will employ well-known libraries for solving real-world problems. This experiment could clear the mist about what is happening under the hood. It's important to recognize that this is just the tip of the iceberg in the universe of deep learning, which includes advanced concepts like minibatch, learning rate decay, and many more.
