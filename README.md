@@ -14,19 +14,23 @@
   </ol>
 </details>
 
+# 2-layer Neural Network
+
 ### Introduction
 
 This article provides the development of a 2-hidden-layer neural network (NN) only using NumPy. This project is a practical introduction to the fundamentals of deep learning and neural network architecture. The main focus will be on the step-by-step construction of the network, aiming to provide a clear and straightforward understanding of its underlying mechanics (i.e., the mathematics behind NNs).
 
 ### A 2-layer neural network?
 
-There is no secret behind the selection of 2 hidden layers. In this project, we will experiment with different choices for hyperparameters for the NN; therefore, a 2-hidden layer architecture is simple enough to make the test feasible.
+There is no secret behind the selection of 2 layers. In this project, we will experiment with different choices for hyperparameters for the NN; therefore, a 2-layer architecture is simple enough to make the test feasible.
 
 ### Data simulation
 
 First of all, we simulate some data using datasets from sklearn.
 
 ```python
+from utils_data import *
+
 N = 2000
 noise = 0.25
 # load and visualize data
@@ -87,6 +91,8 @@ This project will examine three options for the activation function g(): <a href
 In python code
 
 ```python
+# define helper functions in utils_1batch.py
+
 # ________________ sigmoid function ________________ #
 def sigmoid(x):
     s = 1 / (1 + np.exp(-x))
@@ -144,6 +150,7 @@ $$J = - \frac{1}{m} \sum\limits_{i = 0}^{m} \large\left(\small y^{(i)}\log\left(
 In python code
 
 ```python
+# define helper functions in utils_1batch.py
 def compute_cost(A2, Y):
     # get the number of examples
     m = Y.shape[1]
@@ -175,6 +182,7 @@ The calculation of these gradients is achieved through the backpropagation algor
 In python code:
 
 ```python
+# define helper functions in utils_1batch.py
 # ________________ compute back propagation ________________ #
 def backward_propagation(parameters, temp_cache, X, Y, activation):
     m = X.shape[1]
@@ -237,6 +245,7 @@ def update_parameters(parameters, grads, learning_rate):
 Bring everything together to make a 2-layer NN as follows:
 
 ```python
+# define helper functions in utils_1batch.py
 def nn_1layer_1batch(
     X, Y, n_h, learning_rate, activation, number_iterations, print_cost=False
 ):
@@ -282,6 +291,8 @@ def nn_1layer_1batch(
 A commonly asked question from beginners when learning NN is, what are the optimal hyperparameters to use? A fairly simple architecture like this 2-layer NN allows experiments for multiple choices of hyperparameters.
 
 ```python
+from utils_1batch import *
+
 # number of features
 n_x = 2
 # the number of nodes in the hidden layer
@@ -353,10 +364,10 @@ From the scatter plot, we can observe a significant variation in the training ti
 
 </br>
 
-| No. of odes | Activation | Learning rate | No. of Iterations | Train |  Dev  | Train time | Index |
-| :---------: | :--------: | :-----------: | :---------------: | :---: | :---: | :--------: | :---: |
-|      3      |    tanh    |      0.6      |       10000       | 95.12 | 94.25 |  4.341808  |  126  |
-|      5      |  sigmoid   |      0.1      |      100000       | 95.12 | 94.25 | 19.150660  |  271  |
+| Number of nodes | Activation | Learning rate | Iterations | Train |  Dev  | Train time | Configuration index |
+| :-------------: | :--------: | :-----------: | :--------: | :---: | :---: | :--------: | :-----------------: |
+|        3        |    tanh    |      0.6      |   10000    | 95.12 | 94.25 |  4.527224  |         126         |
+|        5        |  sigmoid   |      0.1      |   100000   | 95.12 | 94.25 | 20.912593  |         271         |
 
 </br>
 
@@ -396,4 +407,4 @@ Accuracy: 93.6 %
 
 All the steps presented in this examining result section can be found in the file EDA.ipynb.
 
-To wrap things up, this 2-layer neural network will not solve any real-world tasks, but it is an excellent starting point for anyone diving into artificial intelligence, machine learning, and deep learning. It is often the case that you will employ well-known libraries for solving real-world problems. This experiment could clear the mist about what is happening under the hood. It's important to recognize that this is just the tip of the iceberg in the universe of deep learning, which includes advanced concepts like minibatch, learning rate decay, and many others waiting to be explored.
+To wrap things up, this 2-layer neural network will not solve any real-world tasks, but it is an excellent starting point for anyone diving into artificial intelligence, machine learning, and deep learning. It is often the case that you will employ well-known libraries for solving real-world problems. This experiment could clear the mist about what is happening under the hood. It's important to recognize that this is just the tip of the iceberg in the universe of deep learning, which includes advanced concepts like minibatch, learning rate decay, and many more.

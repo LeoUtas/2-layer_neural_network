@@ -1,6 +1,5 @@
 from utils_data import *
 from utils_1batch import *
-from utils_minibatch import *
 import numpy as np
 
 
