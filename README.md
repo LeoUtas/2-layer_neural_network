@@ -366,10 +366,10 @@ From the scatter plot, we can observe a significant variation in the training ti
 
 </br>
 
-| Number of nodes | Activation | Learning rate | Iterations | Train |  Dev  | Train time | Configuration index |
-| :-------------: | :--------: | :-----------: | :--------: | :---: | :---: | :--------: | :-----------------: |
-|        3        |    tanh    |      0.6      |   10000    | 95.12 | 94.25 |  4.527224  |         126         |
-|        5        |  sigmoid   |      0.1      |   100000   | 95.12 | 94.25 | 20.912593  |         271         |
+| Number of nodes | Activation | Learning rate | Iterations | Accuracy Train | Accuracy Dev | Train time | Configuration index |
+| :-------------: | :--------: | :-----------: | :--------: | :------------: | :----------: | :--------: | :-----------------: |
+|        3        |    tanh    |      0.6      |   10000    |     95.12      |    94.25     |  4.527224  |         126         |
+|        5        |  sigmoid   |      0.1      |   100000   |     95.12      |    94.25     | 20.912593  |         271         |
 
 </br>
 
