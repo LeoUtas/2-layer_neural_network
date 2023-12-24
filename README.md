@@ -86,7 +86,13 @@ $$z^{[2] (i)} = W^{[2]} a^{[1] (i)} + b^{[2]}\tag{3}$$
 
 $$\hat{y}^{(i)} = a^{[2] (i)} = \sigma(z^{ [2] (i)})\tag{4}$$
 
-$$y^{(i)}_{\text{prediction}} = \begin{cases} 1 & \text{if } a^{[2](i)} > 0.5 \\ 0 & \text{otherwise} \end{cases} \tag{5}$$
+<p align="center">
+  <a href="">
+    <img src="/input/viz/image1.png" width="290" alt=""/>
+  </a>
+</p>
+
+<!-- $$y^{(i)}_{\text{prediction}} = \begin{cases} 1 & \text{if } a^{[2](i)} > 0.5 \\ 0 & \text{otherwise} \end{cases} \tag{5}$$ -->
 
 This project will examine three options for the activation function g(): <a href="https://en.wikipedia.org/wiki/Sigmoid_function#:~:text=A%20sigmoid%20function%20is%20a,refer%20to%20the%20same%20object.">sigmoid</a>, <a href="https://reference.wolfram.com/language/ref/Tanh.html#:~:text=Tanh%20is%20the%20hyperbolic%20tangent,and%20hyperbolic%20cosine%20functions%20via%20.">tanh</a> and <a href="https://www.kaggle.com/code/dansbecker/rectified-linear-units-relu-in-deep-learning">relu</a>.
 
