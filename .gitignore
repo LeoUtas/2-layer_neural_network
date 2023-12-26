@@ -4,6 +4,11 @@ test_1batch.ipynb
 test_minibatch.ipynb
 common.txt
 
+utils_minibatch.py
+test_minibatch.py
+.gitignore
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
