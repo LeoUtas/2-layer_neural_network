@@ -294,7 +294,7 @@ def nn_1layer_1batch(
 
 </br>
 
-### Test different selection of model configuration
+### Test different model configurations
 
 A commonly asked question from beginners when learning NN is, what are the optimal hyperparameters to use? A fairly simple architecture like this 2-layer NN allows experiments for multiple choices of hyperparameters.
 
@@ -323,6 +323,30 @@ def run_test_1batch():
         activations=activations,
         batch_type="one batch",
     )
+```
+
+</br>
+
+A crucial component is examining how each configuration performs on train and test datasets. We will apply the below functions to compute accuracy.
+
+```python
+# ________________ make predictions using the NN ________________ #
+def predict(X, parameters, activation):
+    X = X.T
+    A2, temp_cache = forward_propagation(X, parameters, activation)
+    predictions = (A2 > 0.5).astype(int)
+
+    return predictions
+
+# ________________ compute the accuracy of the NN ________________ #
+def compute_accuracy(Y, Y_hat):
+    accuracy = float(
+        (np.dot(Y, Y_hat.T) + np.dot(1 - Y, 1 - Y_hat.T)) / float(Y.size) * 100
+    )
+
+    accuracy = round(accuracy, 2)
+
+    return accuracy
 ```
 
 ### Examining results
