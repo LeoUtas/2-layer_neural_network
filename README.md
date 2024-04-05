@@ -446,3 +446,8 @@ All the steps presented in this examining result section can be found in the fil
 To wrap things up, this 2-layer neural network will not solve any real-world tasks, but it is an excellent starting point for anyone diving into artificial intelligence, machine learning, and deep learning. It is often the case that you will employ well-known libraries for solving real-world problems. This experiment could clear the mist about what is happening under the hood. It's important to recognize that this is just the tip of the iceberg in the universe of deep learning, which includes advanced concepts like minibatch, learning rate decay, and many more.
 
 </br>
+
+Thank you for reading this far
+
+Have a great day
+Hoang
